@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- THIS MAKES IT A PARENT -->
+	<packaging>pom</packaging>
+
+	<groupId>com.pm</groupId>
+	<artifactId>Hospitalmanagement</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Hospitalmanagement</name>
+
+	<!-- IMPORTANT: Use Spring Boot parent POM -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.5.9</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<!-- CHILD MODULES -->
+	<modules>
+		<module>billing-service</module>
+		<module>Patient-service</module>
+        <module>infrastructure</module>
+    </modules>
+
+	<!-- SHARED PROPERTIES -->
+	<properties>
+		<java.version>21</java.version>
+		<!-- Remove spring-boot.version as it's inherited -->
+		<grpc.version>1.68.1</grpc.version>
+		<protobuf.version>3.25.5</protobuf.version>
+		<kafka.version>3.7.0</kafka.version>
+	</properties>
+
+	<!-- CENTRALIZED DEPENDENCY VERSIONS (for non-Spring dependencies) -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- gRPC BOM -->
+			<dependency>
+				<groupId>io.grpc</groupId>
+				<artifactId>grpc-bom</artifactId>
+				<version>${grpc.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- Add other BOMs if needed -->
+		</dependencies>
+	</dependencyManagement>
+
+
+
+</project>
