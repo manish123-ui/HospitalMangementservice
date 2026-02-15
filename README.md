@@ -1,5 +1,5 @@
 Hospital Management Microservices System
-
+<img width="1339" height="758" alt="image" src="https://github.com/user-attachments/assets/828ec4b4-2bae-49d4-8f54-cee70cf6c119" />
 This repository contains a Java / Spring Boot–based microservices architecture for a hospital management system.
 The project demonstrates real-world backend patterns such as service decomposition, synchronous and asynchronous communication, authentication, and event-driven design.
 
@@ -127,4 +127,4 @@ Database-per-service pattern
 Clean separation of concerns
 
 Production-style configuration management
-<img width="1339" height="758" alt="image" src="https://github.com/user-attachments/assets/828ec4b4-2bae-49d4-8f54-cee70cf6c119" />
+
